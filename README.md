@@ -1,0 +1,3 @@
+# CodeMasters — Proof Page
+
+This is the CodeMasters proof page, published with GitHub Pages at https://codemasters402.github.io/. CodeMasters is a web scraping and data extraction service run by Farhan Younas: custom scrapers that turn websites into clean Excel or CSV data, with a fixed quote before starting and a sample first. The page shows the real numbers from delivered projects — 8,729 products from Crocus, 6,721 products and 18,539 images from Gardening Express, 911 products from David Austin Roses, 29,397 photos across 7,605 products from SalonCentric, and 2,097 UAE off-plan projects from Reelly — alongside the services offered and a simple three-step process for working together.

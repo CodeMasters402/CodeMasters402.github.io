@@ -1,0 +1,204 @@
+/* CodeMasters proof page — dark navy, no frameworks, system fonts only. */
+
+:root {
+  --bg: #0a1628;
+  --bg-soft: #0e1e36;
+  --card: #122642;
+  --border: #1e3a5c;
+  --text: #e8eef7;
+  --muted: #9fb3cc;
+  --accent: #5aa2ff;
+  --accent-hover: #7db4ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.brand:hover { color: var(--text); text-decoration: none; }
+
+.site-nav { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.site-nav a { color: var(--muted); }
+.site-nav a:hover { color: var(--text); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #06101f;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--accent);
+}
+.btn:hover { background: var(--accent-hover); color: #06101f; text-decoration: none; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+}
+.btn-outline:hover { background: rgba(90, 162, 255, 0.12); color: var(--accent-hover); }
+
+.btn-small { padding: 6px 14px; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 72px 0 56px;
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0 0 4px;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin: 0 0 20px;
+}
+
+.pitch {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* Stats */
+.stats { border-bottom: 1px solid var(--border); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.stat { text-align: center; }
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-label { color: var(--muted); font-size: 0.95rem; }
+
+/* Sections */
+.section { padding: 56px 0; }
+.section-alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+.section h2 { font-size: 1.8rem; margin: 0 0 8px; }
+.section-intro { color: var(--muted); margin: 0 0 32px; max-width: 640px; }
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.card h3 { margin: 0 0 6px; font-size: 1.15rem; }
+.card p { margin: 0; color: var(--muted); }
+.card-number {
+  color: var(--accent) !important;
+  font-weight: 700;
+  margin-bottom: 8px !important;
+}
+
+/* Steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.step-number {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #06101f;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.step h3 { margin: 0 0 6px; }
+.step p { margin: 0; color: var(--muted); }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  color: var(--muted);
+  text-align: center;
+}
+.site-footer p { margin: 4px 0; }
+
+/* Small screens */
+@media (max-width: 700px) {
+  .hero h1 { font-size: 2.2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: 1fr; }
+}
